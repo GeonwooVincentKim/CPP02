@@ -6,14 +6,14 @@
 #    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/27 22:56:40 by geonwkim          #+#    #+#              #
-#    Updated: 2024/11/27 23:10:47 by geonwkim         ###   ########.fr        #
+#    Updated: 2024/12/03 22:19:24 by geonwkim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = fixed_point
+NAME = ./a.out
 SRCS = main.cpp Fixed.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
