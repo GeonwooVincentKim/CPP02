@@ -6,38 +6,28 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 23:08:24 by geonwkim          #+#    #+#             */
-/*   Updated: 2024/12/07 23:12:25 by geonwkim         ###   ########.fr       */
+/*   Updated: 2024/12/08 22:37:29 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main(void) {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
+int main() {
+    Fixed a;
+    Fixed const b(10);
+    Fixed const c(42.42f);
+    Fixed const d(b);
+    a = Fixed(1234.4321f);
 
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
+    std::cout << "a is " << a << std::endl;
+    std::cout << "b is " << b << std::endl;
+    std::cout << "c is " << c << std::endl;
+    std::cout << "d is " << d << std::endl;
 
-	return 0;
+    std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+    std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+    std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+    std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+
+    return 0;
 }
-// The output will be:
-// Default constructor called
-// Copy constructor called
-// Copy assignment operator called // <-- This line may be missing depending on your implementation
-// getRawBits member function called
-// Default constructor called
-// Copy assignment operator called
-// getRawBits member function called
-// getRawBits member function called
-// 0
-// getRawBits member function called
-// 0
-// getRawBits member function called
-// 0
-// Destructor called
-// Destructor called
-// Destructor called
